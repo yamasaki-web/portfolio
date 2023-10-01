@@ -1,0 +1,249 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*
+*-----------------------------
+*全体
+*-----------------------------
+*/
+
+* {
+  font-family: Arial, sans-serif;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+html {
+  font-size: 10px; /*62.5%*/
+}
+
+body {
+  background: #f0f3f5;
+  color: #333;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+h3 {
+  position: relative;
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+h3::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 4px;
+  height: 100%;
+  border-radius: 3px;
+  background-color: #333;
+}
+
+a {
+  color: #333;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/*
+*-----------------------------
+*header
+*-----------------------------
+*/
+header {
+  position: fixed;
+  padding: 20px;
+  width: 100%;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-icon img {
+  width: 200px;
+}
+
+.header-color {
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #333;
+  font-size: 2rem;
+}
+
+/*
+*-----------------------------
+*main
+*-----------------------------
+*/
+
+.kv-img {
+  margin-bottom: 130px;
+  width: 100vw;
+  height: 80vh;
+  object-fit: cover;
+}
+
+.wrapper {
+  margin: 0 auto 130px auto;
+  padding: 0 4%;
+}
+
+#skills > div,
+#works > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skill-ability {
+  max-width: 30%;
+}
+
+.skill-ability img {
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+  max-height: 150px;
+  object-fit: cover;
+}
+
+.project {
+  margin-bottom: 20px;
+  max-width: 24%;
+  display: inline-block;
+}
+
+.project img {
+  max-width: 100%;
+  height: 210px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+#about > div {
+  display: flex;
+  align-items: center;
+}
+
+#about figure {
+  max-width: 50%;
+}
+
+#about figure img {
+  max-width: 80%;
+  border-radius: 50%;
+}
+
+/*
+*-----------------------------
+*footer
+*-----------------------------
+*/
+footer {
+  background-color: #293a4a;
+  color: #fff;
+  padding: 20px;
+  border-top: 1px solid #1d2b36;
+  text-align: center;
+}
+
+.sns-icon {
+  margin-bottom: 10px;
+}
+
+.sns-icon img {
+  height: 32px;
+  margin-right: 10px;
+}
+
+/*
+*-----------------------------
+*メディアクエリ
+*-----------------------------
+*/
+@media (max-width: 768px) {
+  h2 {
+    margin-top: -100px;
+    padding-top: 100px;
+  }
+
+  header {
+    padding-bottom: 10px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  nav ul {
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  #skills > div,
+  #works > div {
+    display: block;
+  }
+
+  .skill-ability {
+    max-width: 100%;
+    margin-top: 50px;
+  }
+
+  .project {
+    max-width: 48%;
+  }
+
+  .project:nth-child(2n + 1) {
+    margin-right: 1%;
+  }
+
+  #about > div {
+    display: block;
+  }
+
+  #about figure {
+    margin: 0 auto;
+  }
+
+  #about figure img {
+    max-width: 100%;
+  }
+}
