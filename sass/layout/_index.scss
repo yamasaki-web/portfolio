@@ -1,0 +1,319 @@
+@charset "utf-8";
+@use '../foundation/mixins' as *;
+
+/* ============================================
+// INDEX
+// ==========================================*/
+.front-page {
+
+  //メインビジュアル
+  .front__mv {
+    .mv__contents {
+      width: 100%;
+      max-height: 100vh;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+
+      @media (max-width:600px) {
+        aspect-ratio: 360/440;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+
+        .swiper-wrapper {
+          .swiper-slide {
+            overflow: hidden;
+
+            .img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 100%;
+
+              @media (max-width:600px) {
+                height: 100%;
+              }
+
+              img {
+                transition: 1s;
+              }
+            }
+
+
+            &-active {
+              .img {
+                img {
+                  transform: translateX(0);
+                }
+              }
+            }
+
+            &-prev {
+              .img {
+                img {
+                  transform: scale(1.2) translateX(80vw);
+                }
+              }
+            }
+
+            &-next,
+            &-duplicate-next {
+              .img {
+                img {
+                  transform: scale(1.2) translateX(-80vw);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //スキル
+  .front__skills {
+    &__inner {
+      padding-top: 88px;
+      @include mq(sp){
+        padding-top: 56px;
+      }
+
+      .skills__contents {
+        .list {
+          display: flex;
+          gap: 4%;
+          margin-top: 8px;
+          @include mq(sp){
+          flex-direction: column;
+          margin-top: 0;
+          gap: 16px;
+          }
+
+          &__item {
+            flex: 1;
+
+            .img {
+              max-width: 200px;
+              width: 100%;
+              aspect-ratio: 1/1;
+              margin-inline: auto;
+              background: $forth-color;
+              @include mq(sp){
+                max-width: 160px;
+              }
+            }
+
+            &:nth-child(3n+1) {
+              .img {
+                mask: url(../img/illust_skill_pic01.png)center center /contain no-repeat;
+              }
+            }
+
+            &:nth-child(3n+2) {
+              .img {
+                mask: url(../img/illust_skill_pic02.png)center center /contain no-repeat;
+              }
+            }
+
+            &:nth-child(3n+3) {
+              .img {
+                mask: url(../img/illust_skill_pic03.png)center center /contain no-repeat;
+              }
+            }
+
+            .heading {
+              font-size: 2.4rem;
+              font-weight: 700;
+              letter-spacing: 0.075em;
+              color: $forth-color;
+              border-bottom: 1px solid;
+              width: fit-content;
+              padding-bottom: 4px;
+              @include mq(sp){
+              font-size: 1.8rem;
+              padding-bottom: 2px;
+              }
+            }
+
+            .lead {
+              margin-top: 8px;
+              @include mq(sp){
+                margin-top: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //ワーク
+  .front__works {
+    &__inner {
+      padding-top: 88px;
+      @include mq(sp){
+        padding-top: 56px;
+      }
+
+      .works__contents {
+        .list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(290px, max-content));
+          justify-content: center;
+          gap: 0 3%;
+          margin-top: 48px;
+          @include mq(sp){
+            margin-top: 32px;
+          }
+
+          &__item {
+            display: grid;
+            grid-template-rows: subgrid;
+            grid-row: span 3;
+            max-width: 360px;
+            @include mq(sp){
+            margin-top: 24px;
+            &:first-child{
+              margin-top: 0;
+            }
+            &:nth-child(2){
+              margin-top: 0;
+              @media screen and (max-width:700px){
+                margin-top: 24px;
+              }
+            }
+            }
+
+            a {
+              display: grid;
+              grid-template-rows: subgrid;
+              grid-row: span 3;
+              border: 1px solid $forth-color;
+              padding: 24px 5%;
+              border-radius: 5px;
+              box-shadow: 0 0 6px 12px rgb(#000, 0.04);
+              @include mq(sp){
+                padding: 16px 5%;
+              }
+
+              .img {
+                max-width: 360px;
+
+                img {
+                  aspect-ratio: 16/9;
+                  border-radius: 5px;
+                }
+              }
+
+              .heading {
+                font-size: 1.8rem;
+                font-weight: 700;
+                letter-spacing: 0.075em;
+                margin-top: 16px;
+                @include mq(sp){
+                  font-size: 1.6rem;
+                  margin-top: 12px;
+                }
+              }
+
+              .lead {
+                margin-top: 8px;
+                @include mq(sp){
+                  margin-top: 2px;
+                }
+              }
+
+              @include mq(hover) {
+                &:hover {
+                  opacity: 1;
+                  transform: translateY(-8px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //アバウト
+  .front__about {
+    &__inner {
+      padding-top: 88px;
+      padding-bottom: 120px;
+      @include mq(sp){
+        padding-top: 56px;
+        padding-bottom: 40px;
+      }
+
+      .about__contents {
+        &__body {
+          display: flex;
+          align-items: center;
+          gap: 4%;
+          margin-top: 40px;
+          @include mq(sp){
+          flex-direction: column;
+          margin-top: 32px;
+          gap: 16px;
+          }
+
+          .imgArea {
+            max-width: 240px;
+
+            .img {
+              img {
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+              }
+            }
+          }
+
+          .textArea {
+            .name {
+              font-size: 1.8rem;
+              font-weight: 700;
+              letter-spacing: 0.075em;
+              border-bottom: 1px solid;
+              width: fit-content;
+              padding-bottom: 8px;
+              margin-bottom: 16px;
+              @include mq(sp){
+                font-size: 1.6rem;
+                padding-bottom: 6px;
+                margin-bottom: 12px;
+              }
+            }
+
+            .biography,
+            .qualification {
+              margin-top: 8px;
+              @include mq(sp){
+                margin-top: 10px;
+              }
+
+              .heading {
+                color: #fff;
+                background: $third-color;
+                background: linear-gradient(-45deg, $third-color 0%, $third-color 60%,#ffdc8a 100%);
+                border-radius: 500px;
+                width: fit-content;
+                padding: 0.3em 1em;
+              }
+
+              .text {
+                margin-top: 8px;
+                @include mq(sp){
+                  margin-top: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

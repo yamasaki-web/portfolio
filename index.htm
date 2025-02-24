@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="">
+	<script>
+		var metalist = document.getElementsByTagName('meta');
+		var ua = navigator.userAgent;
+		for (var i = 0; i < metalist.length; i++) {
+			var name = metalist[i].getAttribute('name');
+			if (name && name.toLowerCase() === 'viewport') {
+				if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+					metalist[i].setAttribute('content', 'width=device-width');
+					break;
+				} else {
+					metalist[i].setAttribute('content', 'width=1024');
+					break;
+				}
+			}
+		}
+	</script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>yama portfolioサイト</title>
+
+	<meta name="description" content="">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+	<meta name="robots" content="noindex" />
+	<meta name="robots" content="nofollow" />
+	<meta name="robots" content="noarchive" />
+
+	<!-- SNS -->
+	<meta property="og:title" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="https://job-gear.jp/●/●●/●●●●●●/img/social.png" />
+	<meta property="og:url" content="https://job-gear.jp/●/●●/●●●●●●/" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="https://job-gear.jp/●/●●/●●●●●●/img/favicon.ico">
+	<link rel="apple-touch-icon" href="https://job-gear.jp/●/●●/●●●●●●/img/apple-touch-icon.png">
+
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
+
+	<!-- style -->
+	<!-- 固有 -->
+	<link rel="stylesheet" href="js/vendor/swiper.min.css">
+	<!-- 共通 -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/add.css">
+</head>
+
+<body class="front-page">
+
+	<!-- ハンバーガーメニュー -->
+	<div class="hamburger__btn -hamburger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="hamburger">
+		<div class="hamburger__menu">
+			<div class="hamburger__menu__inner">
+				<div class="logo">
+					<a href="index.htm">
+						<div class="img">
+							<img src="img/logo.png" alt="ロゴ">
+						</div>
+					</a>
+				</div>
+				<div class="hamburger__menu__nav">
+					<ul class="hamburger__menu__nav__list">
+						<li class="hamburger__menu__nav__list__item">
+							<a href="#skills">
+								<span class="eng">Skills</span>
+							</a>
+						</li>
+						<li class="hamburger__menu__nav__list__item">
+							<a href="#works">
+								<span class="eng">Works</span>
+							</a>
+						</li>
+						<li class="hamburger__menu__nav__list__item">
+							<a href="#about">
+								<span class="eng">About</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //ハンバーガーメニュー -->
+
+	<div id="container">
+
+		<!-- ヘッダー -->
+		<header class="header">
+			<div class="header__inner">
+					<h1 class="header__logo">
+						<a href="index.htm">
+							<div class="img">
+								<img src="img/logo.png" alt="ヤマポートフォリオのロゴ">
+							</div>
+						</a>
+					</h1>
+				<nav class="header__nav">
+					<ul class="header__nav__list">
+						<li class="header__nav__list__item">
+							<a href="#skills">
+								<span class="eng">Skills</span>
+							</a>
+						</li>
+						<li class="header__nav__list__item">
+							<a href="#works">
+								<span class="eng">Works</span>
+							</a>
+						</li>
+						<li class="header__nav__list__item">
+							<a href="#about">
+								<span class="eng">About</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main class="main" id="main">
+
+			<!-- メインビジュアル -->
+		<section class="front__mv">
+			<div class="front__mvmv__inner">
+				<div class="mv__contents">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="img">
+									<img src="img/mv_pic01.jpg" alt="写真" class="ofi">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="img">
+									<img src="img/mv_pic02.jpg" alt="写真" class="ofi">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="img">
+									<img src="img/mv_pic03.jpg" alt="写真" class="ofi">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+			<!-- スキル -->
+			<section class="front__skills" id="skills">
+				<div class="front__skills__inner innerWrap">
+					<div class="skills__contents">
+						<div class="commonTitle01 anime -fadeInBottom">
+							<div class="commonTitle01__inner">
+								<p class="eng">Skills</p>
+								<h2 class="ja">スキル</h2>
+							</div>
+						</div>
+						<ul class="list">
+						<li class="list__item anime -fadeInBottom">
+							<div class="img"></div>
+							<h3 class="heading">コーディング</h3>
+							<p class="lead">HTML、CSS、JavaScriptを用いたコーディングを行っております。
+								運用しやすいサイト構築のため、Sass（SCSS）、BEM、FLOCSS といった手法を取り入れ、メンテナンス性と再利用性 を重視したサイト作りを心掛けています。<br>
+								また、コーディング後に WordPress化 することで、さらに利便性の高い運用ができるよう対応しております。
+								開発環境としては Visual Studio Code（VSCode） を使用し、効率的なコーディングを行っています。</p>
+						</li>
+						<li class="list__item anime -fadeInBottom">
+							<div class="img"></div>
+							<h3 class="heading">デザイン</h3>
+							<p class="lead">Photoshop・Illustrator を使用しており、基本的な機能は問題なく扱えます。
+								現在は Figma を勉強中で、デザインの理解を深めながら実践を重ねています。
+								クライアントのブランドやビジョンを際立たせるデザイン を意識し、直感的なユーザーエクスペリエンス を提供できるよう心がけています。<br>
+								ウェブプロジェクトの成功に貢献できるよう、視覚的な魅力と使いやすさの両立を大切にしています。</p>
+						</li>
+						<li class="list__item anime -fadeInBottom">
+							<div class="img"></div>
+							<h3 class="heading">コミュニケーション</h3>
+							<p class="lead">私はコーディングスキルのみならず、コミュニケーション能力も自らの強みとしております。プロジェクトの要件や進捗状況について、クライアントやチームに対してわかりやすく丁寧にお伝えし、円滑なコミュニケーションを心がけています。<br>
+								また、いただいたフィードバックを真摯に受け入れ、共感を持って対応することで、共同作業をスムーズに進め、プロジェクトの成功に向けた貢献を目指しております。</p>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- ワーク -->
+			<section class="front__works" id="works">
+				<div class="front__works__inner innerWrap">
+					<div class="works__contents">
+						<div class="commonTitle01 anime -fadeInBottom">
+							<div class="commonTitle01__inner">
+								<p class="eng">Works</p>
+								<h2 class="ja">ワーク</h2>
+							</div>
+						</div>
+						<ul class="list">
+						<li class="list__item anime -fadeInBottom">
+							<a href="https://yamasaki-web.github.io/kinkibuild/index.htm" target="_blank">
+							<div class="img">
+								<img src="img/works/works_pic01.png" alt="写真" class="ofi">
+							</div>
+							<h3 class="heading">株式会社近畿ビルド</h3>
+							<p class="lead">プランニング・デザ	イン・コーディング（HTML、CSS、JavaScript、WordPress）を一貫して担当させていただきました。</p>
+						</a>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- アバウト -->
+			<section class="front__about" id="about">
+				<div class="front__about__inner innerWrap">
+					<div class="about__contents">
+						<div class="commonTitle01 anime -fadeInBottom">
+							<div class="commonTitle01__inner">
+								<p class="eng">About</p>
+								<h2 class="ja">アバウト</h2>
+							</div>
+						</div>
+						<div class="about__contents__body">
+							<div class="imgArea anime -fadeInBottom">
+							<div class="img">
+								<img src="img/about_pic.jpg" alt="やまの写真">
+							</div>
+							</div>
+							<div class="textArea anime -fadeInBottom">
+								<h3 class="name">山崎（やまさき）</h3>
+								<div class="biography">
+									<h4 class="heading">略歴</h4>
+									<p class="text">関西大学法学部を卒業後、製造業や出版卸業にて営業事務の経験を積み、その後、大手通信業や大手求人広告業においてサイト制作に従事してまいりました。現在は、コーディングおよびWordPressサイト構築を中心に活動しております。ウェブの可能性を追求しつつ、クリエイティブな分野での探究心を大切にしながら活動しています。</p>
+								</div>
+								<div class="qualification">
+									<h4 class="heading">資格</h4>
+									<p class="text">ウェブデザイン技能検定2級、色彩検定2級、日商簿記3級</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<!-- フッター -->
+		<footer class="footer">
+			<div class="footer__inner">
+					<div class="copyright">&copy;&nbsp;YAMA PORTFOLIO</div>
+			</div>
+		</footer>
+
+		<!-- ページトップ -->
+		<span class="pagetop">
+			<a href="#container"><div class="arrow"></div></a>
+		</span>
+
+	</div>
+
+	<!-- 共通スクリプト -->
+	<script src="js/vendor/jquery-3.4.1.min.js"></script>
+	<script src="js/script.js"></script>
+	<!-- 固有スクリプト -->
+	<script src="js/vendor/swiper.min.js"></script>
+	<script src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+@charset "utf-8";
+@use '../foundation/mixins' as *;
+
+/* ============================================
+// HEADER
+// ==========================================*/
+.header {
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: .3s ease;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5%;
+  }
+
+  &__logo {
+    margin: 0;
+
+    a {
+      .img {
+        display: flex;
+        max-width: 260px;
+        transition: 0.3s;
+        @include mq(sp){
+          max-width: 208px;
+        }
+
+        img {
+          aspect-ratio: 365/45;
+          filter: invert(0.25) drop-shadow(0px 0px 1px #fff);
+        }
+      }
+    }
+  }
+
+  &__nav {
+
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+     @include mq(sp){
+      display: none;
+     }
+
+
+      &__item {
+        a {
+          background: #fff;
+          border-radius: 500px;
+          padding: 0.6em 1.2em;
+
+          @include mq(hover) {
+            &:hover {
+              opacity: 1;
+
+              .eng {
+                color: $third-color;
+              }
+            }
+          }
+
+          .eng {
+            font-family: $eng;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.075em;
+            color: $primary-color;
+            transition: .3s ease;
+           @include mq(sp){
+            font-size: 1.5rem;
+           }
+          }
+
+        }
+
+      }
+    }
+
+  }
+}
+
+.js-scrolled {
+  .header {
+    background: #fff;
+    filter: drop-shadow(0 0 12px rgba($txt-color, .3));
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background: rgb(#fff, 0.9);
+    backdrop-filter: blur(10px);
+
+    &__logo {
+      a {
+        .img {
+          max-width: 224px;
+          @include mq(sp){
+            max-width: 184px;
+          }
+        }
+      }
+    }
+
+    &__nav {
+
+      &__list {
+        &__item {
+          a {
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+//foundation
+@use "foundation/base" as *;
+@use "foundation/mixins" as *;
+@use "foundation/normalize" as *;
+
+//object
+@use "object/module" as *;
+
+//layout
+@use "layout/footer" as *;
+@use "layout/header" as *;
+@use "layout/index" as *;

@@ -1,0 +1,95 @@
+@charset "utf-8";
+@use "../foundation/mixins" as *;
+
+/* ============================================
+// FOOTER
+// ==========================================*/
+.footer {
+  background: #333;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @include mq(sp){
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+&__inner{
+  .copyright{
+    font-size: 1.2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(sp){
+      font-size: 1.1rem;
+    }
+  }
+}
+}
+
+/* ============================================
+// PAGETOP
+// ==========================================*/
+.pagetop {
+  position: fixed;
+  right: 16px;
+  bottom: 32px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s;
+  @include mq(sp){
+    right: 8px;
+    bottom: 16px;
+  }
+
+  .js-scrolled & {
+    opacity: 1;
+  }
+
+  a {
+    background: linear-gradient(-45deg, $primary-color 0%, $primary-color 60%,$secondary-color 100%);
+    border-radius: 50%;
+    width: 60px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(sp){
+      width: 56px;
+    }
+    @media (hover: hover) {
+      &:hover {
+        opacity: 1;
+        filter: brightness(1.1);
+        transform: translateY(-4px);
+      }
+    }
+    .arrow{
+      position: relative;
+      display: inline-block;
+      width: 2px;
+      height: 15px;
+      margin: 0 5.7px;
+      border-radius: 9999px;
+      background-color: #fff;
+      &::before,&::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1px);
+  width: 2px;
+  height: 10px;
+  border-radius: 500px;
+  background-color: #fff;
+  transform-origin: 50% 1px;
+}
+
+&::before {
+  transform: rotate(45deg);
+}
+
+&::after {
+  transform: rotate(-45deg);
+}
+    }
+  }
+}
